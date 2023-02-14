@@ -1,0 +1,169 @@
+@import url("fonts.css");
+@import url("normalize.css");
+
+body {
+  --this-color0: var(--pri0);
+  --this-color10: var(--pri10);
+  --this-color20: var(--pri20);
+  --this-color30: var(--pri30);
+  --this-color40: var(--pri40);
+  --this-color50: var(--pri50);
+  --this-color60: var(--pri60);
+  --this-color70: var(--pri70);
+  --this-color80: var(--pri80);
+  --this-color90: var(--pri90);
+  --this-color100: var(--pri100);
+
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 32px;
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+
+  background-color: var(--this-color10);
+  color: var(--this-color90);
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  & box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    align-items: inherit;
+    align-content: flex-start;
+    flex: 1;
+    padding: 8px;
+    gap: 8px;
+    box-sizing: border-box;
+
+    &[nowrap] {
+      flex-wrap: nowrap;
+    }
+    &[nopad] {
+      padding: 0;
+    }
+    &[unimportant] {
+      flex: 0.5;
+    }
+    &[important] {
+      flex: 2;
+      width: 100%;
+    }
+
+    &[outline] {
+      border-radius: 8px;
+      border: 1px solid var(--this-color80);
+      background-color: var(--this-color20);
+      color: var(--this-color80);
+    }
+
+    &[frame] {
+      --this-color0: var(--sec0);
+      --this-color10: var(--sec10);
+      --this-color20: var(--sec20);
+      --this-color30: var(--sec30);
+      --this-color40: var(--sec40);
+      --this-color50: var(--sec50);
+      --this-color60: var(--sec60);
+      --this-color70: var(--sec70);
+      --this-color80: var(--sec80);
+      --this-color90: var(--sec90);
+      --this-color100: var(--sec100);
+      border-radius: 8px;
+      background-color: var(--this-color20);
+    }
+
+    &[horizontal] {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &[align-center] {
+      align-items: center;
+    }
+    &[align-start] {
+      align-items: flex-start;
+    }
+    &[align-end] {
+      align-items: flex-end;
+    }
+    &[align-stretch] {
+      align-items: stretch;
+    }
+
+    &[justify-start] {
+      justify-content: flex-start;
+    }
+    &[justify-end] {
+      justify-content: flex-end;
+    }
+    &[justify-center] {
+      justify-content: center;
+      text-align: center;
+    }
+    &[justify-around] {
+      justify-content: space-around;
+    }
+  }
+  
+  & text, & a {
+
+    display: inline-block;
+    font-size: 16px;
+    color: var(--this-color80);
+
+    &[large], &[big] {
+      font-family: 'Krona One', sans-serif;
+      text-transform: uppercase;
+    }
+    &[large] {
+      font-size: 24px;
+    }
+    &[big] {
+      font-size: 18px;
+    }
+
+    &[nobreak] {
+      white-space: nowrap;
+    }
+
+    &[frame] {
+      --this-color0: var(--sec0);
+      --this-color10: var(--sec10);
+      --this-color20: var(--sec20);
+      --this-color30: var(--sec30);
+      --this-color40: var(--sec40);
+      --this-color50: var(--sec50);
+      --this-color60: var(--sec60);
+      --this-color70: var(--sec70);
+      --this-color80: var(--sec80);
+      --this-color90: var(--sec90);
+      --this-color100: var(--sec100);
+
+      padding: 4px;
+      border-radius: 8px;
+      background-color: var(--this-color20);
+    }
+
+    &[code] {
+      font-family: 'Inconsolata', sans-serif;
+    }
+  }
+
+  & a {
+    &:any-link {
+      font-weight: bold;
+      color: var(--this-color70);
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: var(--this-color90);
+    }
+  }
+}
+
