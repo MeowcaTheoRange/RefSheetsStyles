@@ -7,14 +7,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet/less" type="text/css" href="assets/styles/main.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/styles/mspa.less" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20,700,1" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   </head>
   <body>
     <box horizontal nopad align-start justify-start>
-      <box nopad>
-        <box outline>
+      <box nopad parent important>
+        <box outline parent>
           <text large>KEELEZ BUNBAT</text>
-          <a href="//">&lt;== Back To List</a>
+          <a href="//" code>&lt;== Back To List</a>
           <text>(pronounced like <text frame code>key-lehz boone-baht</text>)</text>
           <text>Also known as <text frame code>obfuscatedProcesses [OP]</text> online.</text>
           <box>
@@ -36,8 +38,176 @@
             <a href="//" code>MeowcaTheoRange</a>
           </box>
         </box>
+        <box outline parent align-start span>
+          <text big>Colors</text>
+          <box horizontal justify-around align-stretch>
+            <text>HEX: <text frame code>#000000</text></text>
+            <text>RGB: <text frame code>rgb(0, 0, 0)</text></text>
+          </box>
+          <box nopad parent span horizontal align-stretch justify-around>
+            <box horizontal justify-center>
+              <slot></slot>
+              <slot></slot>
+            </box>
+            <box horizontal justify-center>
+              <slot></slot>
+              <slot></slot>
+            </box>
+          </box>
+          <spacer></spacer>
+          <text big>Image Colors</text>
+          <box nopad parent span horizontal align-stretch justify-start>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+            <slot></slot>
+          </box>
+        </box>
       </box>
-      <box nopad>
+      <box horizontal nopad parent important>
+        <box parent nopad>
+          <img src="https://meowcatheorange.github.io/RefSheets/assets/characterSpecific/keelez/keelez.png"/>
+        </box>
+        <box nopad parent align-stretch>
+          <box outline parent align-start span>
+            <text big>Inventory</text>
+            <box horizontal justify-around align-stretch>
+              <text>Name: <text frame code>Air</text></text>
+              <text>ID: <text frame code>minecraft:air</text></text>
+            </box>
+            <box span nopad>
+              <box nopad horizontal nowrap align-center justify-center>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+              </box>
+              <box nopad horizontal nowrap align-center justify-center>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+              </box>
+              <box nopad horizontal nowrap align-center justify-center>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+              </box>
+              <spacer noshow></spacer>
+              <box nopad horizontal nowrap align-center justify-center>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+                <slot></slot>
+              </box>
+            </box>
+          </box>
+        </box>
+      </box>
+    </box>
+    <box nopad align-start justify-start>
+      <box outline parent span align-left justify-start>
+        <text big>Policies</text>
+        <box align-center frame code span>
+          <box nopad nowrap horizontal>
+            <span class="material-symbols-outlined">done</span>
+            <text align-left>Making art of this character.</text>
+          </box>
+          <box nopad nowrap horizontal>
+            <span class="material-symbols-outlined">question_mark</span>
+            <text align-left>Making art of this character with other characters.</text>
+          </box>
+          <box nopad nowrap horizontal>
+            <span class="material-symbols-outlined">close</span>
+            <text align-left>Kinning this character.</text>
+          </box>
+          <box nopad nowrap horizontal>
+            <span class="material-symbols-outlined">close</span>
+            <text align-left>Shipping this character with others.</text>
+          </box>
+          <box nopad nowrap horizontal>
+            <span class="material-symbols-outlined">question_mark</span>
+            <text align-left>Creating fanfiction of this character.</text>
+          </box>
+        </box>
+      </box>
+      <box horizontal nopad align-stretch>
+        <box span outline parent align-start justify-start>
+          <text big>Likes/Dislikes</text>
+          <box span align-center frame code>
+            <box nopad nowrap horizontal align-center>
+              <span class="material-symbols-outlined">favorite</span>
+              <text align-left>Timesheet characters</text>
+            </box>
+            <box nopad nowrap horizontal>
+              <span class="material-symbols-outlined">favorite</span>
+              <text align-left>Nixgrub</text>
+            </box>
+            <box nopad nowrap horizontal>
+              <span class="material-symbols-outlined">thumbs_up_down</span>
+              <text align-left>Drawers</text>
+            </box>
+            <box nopad nowrap horizontal>
+              <span class="material-symbols-outlined">heart_broken</span>
+              <text align-left>Grubshell packaging</text>
+            </box>
+          </box>
+        </box>
+        <box span outline parent align-start justify-start>
+          <text big>Fun Facts</text>
+          <box span align-left frame code>
+              <text align-left>Thinks KDE is cool</text>
+              <text align-left>Too privacy-concerned for her own good</text>
+              <text align-left>Fucking Grubble</text>
+              <text align-left>Not very good posture</text>
+              <text align-left>Obsessively organizes her files into small folders</text>
+              <text align-left>Module lover</text>
+          </box>
+        </box>
+      </box>
+      <box outline parent align-start>
+        <text big>Chat Program</text>
+        <pesterlog>
+          <dialogue><coloredtext>obfuscatedProcesses [OP]</coloredtext> is trolling you</dialogue>
+          <coloredtext>The quick brown fox jumped over the lazy dog.</coloredtext>
+          <coloredtext>My girl wove six dozen plaid jackets before she quit.</coloredtext>
+          <coloredtext>Sphinx of black quartz, judge my vow.</coloredtext>
+        </pesterlog>
       </box>
     </box>
     <script src="assets/scripts/init.js" type="module"></script>

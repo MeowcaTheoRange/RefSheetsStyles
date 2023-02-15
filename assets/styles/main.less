@@ -17,7 +17,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 32px;
+  padding: 16px;
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;
 
@@ -26,7 +26,23 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 8px;
+
+  & slot {
+    display: inline-block;
+    border-radius: 4px;
+    border: 2px solid var(--this-color40);
+    background-color: var(--this-color30);
+    color: var(--this-color40);
+    aspect-ratio: 1 / 1;
+    width: 40px;
+    box-sizing: border-box;
+
+    &:hover {
+      border: 2px solid var(--this-color80);
+      color: var(--this-color80);
+    }
+  }
 
   & box {
     display: flex;
@@ -35,24 +51,30 @@ body {
     justify-content: inherit;
     align-items: inherit;
     align-content: flex-start;
+    max-width: 100%;
     flex: 1;
     padding: 8px;
     gap: 8px;
     box-sizing: border-box;
+    overflow: hidden;
+    font-family: inherit;
 
-    &[nowrap] {
-      flex-wrap: nowrap;
+    &[grid] {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, auto);
+      grid-template-rows: auto;
+      gap: auto;
     }
-    &[nopad] {
-      padding: 0;
+    &[vfit] {
+      min-height: max-content;
     }
-    &[unimportant] {
-      flex: 0.5;
+
+    &[parent] {
+      min-width: 400px;
     }
-    &[important] {
-      flex: 2;
-      width: 100%;
-    }
+    // & > box {
+    //   min-width: 384px;
+    // }
 
     &[outline] {
       border-radius: 8px;
@@ -76,6 +98,9 @@ body {
       border-radius: 8px;
       background-color: var(--this-color20);
     }
+    &[code] {
+      font-family: 'Inconsolata', sans-serif;
+    }
 
     &[horizontal] {
       flex-direction: row;
@@ -84,6 +109,7 @@ body {
 
     &[align-center] {
       align-items: center;
+      text-align: center;
     }
     &[align-start] {
       align-items: flex-start;
@@ -93,6 +119,7 @@ body {
     }
     &[align-stretch] {
       align-items: stretch;
+      text-align: center;
     }
 
     &[justify-start] {
@@ -107,14 +134,42 @@ body {
     }
     &[justify-around] {
       justify-content: space-around;
+      text-align: center;
+    }
+
+    &[nowrap] {
+      flex-wrap: nowrap;
+    }
+    &[nopad] {
+      padding: 0;
+      // margin: 8px;
+    }
+    &[unimportant] {
+      flex: 0.5;
+      min-width: 200px;
+    }
+    &[important] {
+      flex: 2;
+      width: 100%;
+    }
+    &[nospan] {
+      max-width: 400px;
+    }
+    &[span] {
+      width: 100%;
+    }
+
+    &[debug] {
+      outline: 5px solid red;
     }
   }
   
   & text, & a {
-
     display: inline-block;
     font-size: 16px;
     color: var(--this-color80);
+    max-width: 100%;
+    font-family: inherit;
 
     &[large], &[big] {
       font-family: 'Krona One', sans-serif;
@@ -127,8 +182,21 @@ body {
       font-size: 18px;
     }
 
+    &[align-center] {
+      text-align: center;
+    }
+    &[align-left] {
+      text-align: left;
+    }
+    &[align-right] {
+      text-align: right;
+    }
+
     &[nobreak] {
       white-space: nowrap;
+    }
+    &[span] {
+      width: 100%;
     }
 
     &[frame] {
@@ -164,6 +232,36 @@ body {
     &:visited {
       color: var(--this-color90);
     }
+  }
+
+  & spacer {
+    width: 100%;
+    height: 0;
+    border: 1px dashed var(--this-color80);
+    // margin: 8px;
+    // box-sizing: border-box;
+
+    &[vertical] {
+      width: 0;
+      height: auto;
+    }
+
+    &[noshow] {
+      border: none;
+    }
+  }
+  
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: calc(100vh - 32px);
+  }
+
+  & span.material-symbols-outlined {
+    width: 18px;
+    font-size: 18px;
+    color: var(--this-color80);
   }
 }
 
